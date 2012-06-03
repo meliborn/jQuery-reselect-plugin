@@ -23,7 +23,7 @@
 
 			var template = '<div class="sel_emul">\
 	 			                <div class="sel_selected">\
-	 			                    <input name="' + options.name + '" placeholder="'+options.placeholder+'" class="selected-text" type="text" value=""/>\
+	 			                    <input name="' + options.name + '" placeholder="'+options.placeholder+'" class="selected-text" type="text"/>\
 	 			                    <div class="sel_arrow"></div>\
 	 			                    <div class="sel_options">' + sel_options + '</div>\
 	 			                </div>\
