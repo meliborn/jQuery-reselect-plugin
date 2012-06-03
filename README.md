@@ -1,54 +1,41 @@
 jQuery reselect plugin
 ===========
 
-From [twig-project.org](http://twig-project.org)
-
-> **Fast**: Twig compiles templates down to plain optimized PHP code. The overhead
-compared to regular PHP code was reduced to the very minimum.
-
-> **Secure**: Twig has a sandbox mode to evaluate untrusted template code. This allows
-Twig to be used as a templating language for applications where users may modify
-the template design.
-
-> **Flexible**: Twig is powered by a flexible lexer and parser. This allows the developer
-to define its own custom tags and filters, and create its own DSL.
-
-Credit goes to [Jonathan Geiger](http://github.com/jonathangeiger/kohana-twig) and
-[John Heathco](http://github.com/jheathco/kohana-twig) for creating the original modules.
-This fork contains the following improvements.
-
-* Sandbox configuration
-* Syntax 〃
-* Kohana template loader. Now templates aren't restricted to one directory
-* Updated to follow the Kohana convention
+jQuery reselect plugin customize your <select> elements by adding text input to them, for
+accept custom text from user.
 
 Installation
 ------------
 
-1. `git submodule add https://ThePixelDeveloper@github.com/ThePixelDeveloper/kohana-twig.git modules/twig`
-2. `cd modules/twig && git submodule update --init`
-3. Enable twig in your bootstrap.php file
-4. Extend `Controller_Template_Twig`
+1. Include jQuery library to your page
+2. Include jquery.reselect.min.js and jquery.reselect.css
 
 Usage
 -----
 
-Pretty similar to using the Controller\_Template class.
+Apply plugin to select elements, which should customized
 
-    class Controller_Example extends Controller_Template_Twig
-    {
-      // Template names are generated automatically if not specified. So this
-      // action would map to: example/index.html
-      public function action_index()
-      {
-        $this->template->variable = "Hello World";
-      }
-    }
+    $('.selects').reselect();
 
-Not Happy?
+Features
 ---------
 
-Either [file a bug report](http://github.com/ThePixelDeveloper/kohana-twig/issues)
-or try an alternative project:
+* Small size: 1kb and ~150 bytes with gzip
 
-* [kotwig](http://github.com/Burgestrand/kotwig) by [Burgestrand](http://github.com/Burgestrand)
+Options
+---------
+
+You can pass options to reselect call.
+$('.selects').reselect({
+	name: 'city',
+	placeholder: 'Select city...'
+});
+
+* **name**. The name attribute of the text input, which replaced select element
+* **placeholder**. Placeholder for text input
+
+Features in new versions
+---------
+
+1. Native autocomplete without any third-party plugins. Now, you can use autocomplete by using [jQuery autocomplete plugin](http://jqueryui.com/demos/autocomplete/ "autocomplete")
+2. Coming from your ideas...
